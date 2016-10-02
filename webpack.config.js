@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  entry: './app.jsx',
+  entry: './src/app.js',
   output: { path: __dirname, filename: './build/js/app.js' },
   module: {
     loaders: [
