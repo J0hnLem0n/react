@@ -1,19 +1,19 @@
+var path = require('path');
+var webpack = require('webpack');
+
 module.exports = {
-  entry: './src/app.jsx',
-  output: {
-    filename: './build/js//app.js'
-  },
-  devtool: 'source-map',
+  entry: './app.jsx',
+  output: { path: __dirname, filename: './build/js/app.js' },
   module: {
     loaders: [
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
+        test: /.jsx?$/,
         loader: 'babel-loader',
+        exclude: /node_modules/,
         query: {
           presets: ['es2015', 'react']
         }
-      },
+      }
     ]
-  }
+  },
 };
